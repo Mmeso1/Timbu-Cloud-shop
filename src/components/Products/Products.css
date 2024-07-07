@@ -1,0 +1,59 @@
+.product-sect {
+  padding: 2rem 4rem;
+}
+
+.product-sect .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-sect section header {
+  font-size: 28px;
+  line-height: 3;
+}
+
+/* Style for select boxes */
+.product-sect .select-container {
+  display: flex;
+  gap: 10px;
+}
+
+.product-sect select {
+  padding: 8px 10px 8px 10px;
+  gap: 10px;
+  color: var(--primary-text-color);
+  font-size: var(--primary-font-size);
+  font-weight: 400;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  min-width: 160px;
+  min-height: 36px;
+}
+
+.product-sect .cta-container,
+.product-sect .cta-container span {
+  display: flex;
+  gap: 10px;
+}
+
+.product-sect .cta-container span {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px 10px 8px 10px;
+  min-width: 150px;
+  min-height: 36px;
+  align-items: center;
+}
+
+.product-sect .cta-container span:first-child {
+  color: rgba(255, 153, 153, 1);
+}
+.product-sect .cta-container span:last-child {
+  background-color: var(--primary-color);
+  color: rgba(255, 255, 255, 1);
+}
+.product-sect .cta-container span .prod-icon {
+  width: 20px;
+  height: 20px;
+}

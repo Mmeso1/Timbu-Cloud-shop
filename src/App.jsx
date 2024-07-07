@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import "./App.css";
 import logo from "../src/assets/logo.svg";
+import Products from "./components/Products/Products";
 
 function App() {
   const quicklinks = [
@@ -73,7 +74,9 @@ function App() {
             </div>
           </div>
         </nav>
-        <section className="App-body"></section>
+        <section className="App-body">
+          <Products />
+        </section>
         <footer className="App-footer">
           <div className="footer-content">
             <div className="footer-cta">
