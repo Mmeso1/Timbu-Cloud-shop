@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 import "./Products.css";
 import watch from "../../assets/watch.svg";
 import watch1 from "../../assets/watch (1).svg";
@@ -82,7 +83,9 @@ const ProductItem = () => {
             </div>
             <div className="product-cta">
               <button className="cta-btn">
-                <span>Buy now</span>
+                <Link to="/cart">
+                  <span>Buy now</span>
+                </Link>
               </button>
               <button className="cta-btn">
                 <Icon icon="ic:round-favorite-border" className="cta-icon" />

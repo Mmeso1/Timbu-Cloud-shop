@@ -4,6 +4,7 @@ import "./App.css";
 import logo from "../src/assets/logo.svg";
 import Products from "./components/Products/Products";
 import Home from "./components/Home/Home";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const quicklinks = [
@@ -67,7 +68,9 @@ function App() {
           </div>
           <div className="nav-cta">
             <Icon icon="majesticons:search-line" />
-            <Icon icon="mdi:cart-outline" />
+            <Link to="/cart">
+              <Icon icon="mdi:cart-outline" />
+            </Link>
             <div>
               <span>
                 <Icon icon="iconamoon:profile" />
@@ -80,6 +83,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </section>
         <footer className="App-footer">

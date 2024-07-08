@@ -1,0 +1,120 @@
+.cart-container {
+  margin: 2rem 5rem;
+}
+
+.breadcrumb {
+  color: rgba(142, 142, 142, 1);
+}
+
+.breadcrumb b {
+  color: var(--primary-text-color);
+}
+
+.table {
+  margin-bottom: 4rem;
+}
+
+.table-head {
+  margin-top: 3rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--product-item-bgc);
+  width: 60rem;
+  height: 60px;
+  font-weight: 600;
+  font-size: var(--primary-font-size);
+}
+
+.table-head div {
+  padding: 10px;
+  margin-right: 10px;
+  gap: 10px;
+}
+
+.table-row {
+  height: 130px;
+  background-color: var(--product-item-bgc);
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--product-item-bgc);
+  width: 60rem;
+}
+
+.table-row td {
+  display: flex;
+}
+
+.table-row .tr-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.table-descr {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5.7rem;
+  width: 138px;
+}
+
+.table-descr span:first-child {
+  font-size: var(--primary-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.table-descr span:last-child {
+  font-weight: 400;
+  font-size: var(--small-font-size);
+  color: rgba(79, 79, 79, 1);
+  line-height: 1.2;
+}
+
+.unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 7px;
+  gap: 15px;
+}
+
+.unit span {
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px;
+}
+
+.unit span:nth-child(1) {
+  border-right: 1px solid var(--secondary-color);
+}
+
+.unit span:nth-child(3) {
+  border-left: 1px solid var(--secondary-color);
+}
+
+.unit span:nth-child(1) .icon,
+.unit span:nth-child(3) .icon {
+  height: 24px;
+  width: 24px;
+}
+
+.table-row .price,
+.table-row .total {
+  font-size: var(--nav-font-size);
+  font-weight: 700;
+  text-align: right;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  color: rgba(255, 153, 153, 1);
+}
