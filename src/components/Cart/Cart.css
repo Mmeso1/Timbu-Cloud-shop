@@ -2,6 +2,15 @@
   margin: 2rem 5rem;
 }
 
+.cart-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
 .breadcrumb {
   color: rgba(142, 142, 142, 1);
 }
@@ -15,7 +24,6 @@
 }
 
 .table-head {
-  margin-top: 3rem;
   padding-right: 5rem;
   display: flex;
   justify-content: space-between;

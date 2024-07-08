@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import OrderSummary from "../OrderSummary/OrderSummary";
 import "./Cart.css";
 import watch3 from "../../assets/watch (3).svg";
 import watch2 from "../../assets/watch (2).svg";
@@ -39,39 +40,45 @@ const Cart = () => {
           Home &gt; &nbsp;Products &nbsp; &gt; <b>&nbsp;Cart</b>
         </p>
       </div>
-      <div className="table">
-        <div className="table-head">
-          <div>Product Images</div>
-          <div>Product Description</div>
-          <div>Price</div>
-          <div>Unit</div>
-          <div>Total</div>
-        </div>
-        {cartItems.map((item, index) => (
-          <div className="table-row" key={index}>
-            <div className="tr-img">
-              <img src={item.img_src} alt="watch img" />
-            </div>
-            <div className="table-descr">
-              <span>{item.name}</span>
-              <span>{item.description}</span>
-            </div>
-            <div className="price">{item.price}</div>
-            <div className="unit">
-              <span>
-                <Icon icon="ic:round-minus" className="icon" />
-              </span>
-              <span>{item.unit}</span>
-              <span>
-                <Icon icon="ic:round-add" className="icon" />
-              </span>
-            </div>
-            <div className="total">{item.total}</div>
-            <div>
-              <Icon icon="ic:round-clear" className="clear-icon" />
-            </div>
+
+      <div className="cart-body">
+        <div className="table">
+          <div className="table-head">
+            <div>Product Images</div>
+            <div>Product Description</div>
+            <div>Price</div>
+            <div>Unit</div>
+            <div>Total</div>
           </div>
-        ))}
+          {cartItems.map((item, index) => (
+            <div className="table-row" key={index}>
+              <div className="tr-img">
+                <img src={item.img_src} alt="watch img" />
+              </div>
+              <div className="table-descr">
+                <span>{item.name}</span>
+                <span>{item.description}</span>
+              </div>
+              <div className="price">{item.price}</div>
+              <div className="unit">
+                <span>
+                  <Icon icon="ic:round-minus" className="icon" />
+                </span>
+                <span>{item.unit}</span>
+                <span>
+                  <Icon icon="ic:round-add" className="icon" />
+                </span>
+              </div>
+              <div className="total">{item.total}</div>
+              <div>
+                <Icon icon="ic:round-clear" className="clear-icon" />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div>
+          <OrderSummary />
+        </div>
       </div>
     </div>
   );
