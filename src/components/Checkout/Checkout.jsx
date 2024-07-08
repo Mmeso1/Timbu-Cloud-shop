@@ -26,6 +26,38 @@ const Checkout = () => {
               Debit card
             </label>
           </div>
+          <div class="form">
+            <div className="form-header">Card details</div>
+            <fieldset>
+              <legend>Card name</legend>
+              <input type="text" placeholder="Enter name on the card" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Card details</legend>
+              <div class="card-details">
+                <input
+                  type="text"
+                  placeholder="Card number"
+                  class="card-number"
+                />
+                <input type="text" placeholder="MM/YY" class="expiry-date" />
+                <input type="text" placeholder="CVV" class="cvv" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Email</legend>
+              <input type="email" placeholder="Enter your email" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Billing address</legend>
+              <input type="text" placeholder="Enter billing address" />
+            </fieldset>
+
+            <button>Pay (₦674,310)</button>
+          </div>
         </div>
         <div>
           <OrderSummary />
