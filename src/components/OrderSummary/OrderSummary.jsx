@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./OrderSummary.css";
 
 const OrderSummary = () => {
@@ -26,7 +27,9 @@ const OrderSummary = () => {
         <span>Total</span>
         <span>₦674,310</span>
       </section>
-      <button className="order-summary-button">Checkout</button>
+      <Link to="/checkout" className="order-summary-link">
+        <button className="order-summary-button">Checkout</button>
+      </Link>
     </div>
   );
 };

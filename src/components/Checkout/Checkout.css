@@ -1,0 +1,20 @@
+.breadcrumb {
+  color: rgba(142, 142, 142, 1);
+}
+
+.breadcrumb b {
+  color: var(--primary-text-color);
+}
+
+.checkout-container {
+  margin: 2rem 5rem;
+}
+
+.checkout-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 3rem 0;
+}

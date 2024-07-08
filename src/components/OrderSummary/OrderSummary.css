@@ -48,6 +48,6 @@
   transition: background-color 0.3s ease;
 }
 
-.order-summary-button:hover {
-  background-color: var(--primary-color-dark);
+.order-summary-link {
+  text-decoration: none;
 }

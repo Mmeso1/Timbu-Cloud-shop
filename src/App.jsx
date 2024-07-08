@@ -5,6 +5,7 @@ import logo from "../src/assets/logo.svg";
 import Products from "./components/Products/Products";
 import Home from "./components/Home/Home";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   const quicklinks = [
@@ -84,6 +85,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </section>
         <footer className="App-footer">
