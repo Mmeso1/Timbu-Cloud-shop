@@ -1,6 +1,8 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import "./Products.css";
+import "./ProductItem";
+import ProductItem from "./ProductItem";
 
 const Products = () => {
   const selectTagOptions = [
@@ -10,6 +12,7 @@ const Products = () => {
     { name: "price-min", options: ["Price(min)"] },
     { name: "price-max", options: ["Price(max)"] },
   ];
+
   return (
     <div className="product-sect">
       <section>
@@ -39,6 +42,10 @@ const Products = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="product-listings">
+        <ProductItem />
       </section>
     </div>
   );

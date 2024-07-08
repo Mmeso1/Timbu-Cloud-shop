@@ -8,8 +8,9 @@
   --primary-color: rgba(57, 189, 59, 1);
   --secondary-color: rgba(142, 142, 142, 1);
   --header-background-color: rgba(231, 243, 231, 1);
+  --product-item-bgc: rgba(245, 250, 245, 1);
 
-  ---nav-font-size: 20px;
+  --nav-font-size: 20px;
   --primary-font-size: 16px;
   --small-font-size: 12px;
 

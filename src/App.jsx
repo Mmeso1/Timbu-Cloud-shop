@@ -1,7 +1,9 @@
+import { Routes, Route, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import "./App.css";
 import logo from "../src/assets/logo.svg";
 import Products from "./components/Products/Products";
+import Home from "./components/Home/Home";
 
 function App() {
   const quicklinks = [
@@ -42,14 +44,14 @@ function App() {
           <div className="nav-links">
             <ul>
               <li>
-                <a className="nav-link-item" href="#">
+                <Link className="nav-link-item" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="nav-link-item" href="#">
+                <Link className="nav-link-item" to="/products">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="nav-link-item" href="#">
@@ -75,7 +77,10 @@ function App() {
           </div>
         </nav>
         <section className="App-body">
-          <Products />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+          </Routes>
         </section>
         <footer className="App-footer">
           <div className="footer-content">

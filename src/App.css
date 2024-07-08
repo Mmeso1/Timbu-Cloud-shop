@@ -22,7 +22,7 @@
   padding: 30px 80px 30px 80px;
   color: var(--secondary-text-color);
   background-color: var(--header-background-color);
-  font-size: var(---nav-font-size);
+  font-size: var(--nav-font-size);
   font-weight: 400;
   line-height: 24px;
 }
@@ -117,7 +117,7 @@
 
 .quick-link-sect header {
   font-weight: 600;
-  font-size: var(---nav-font-size);
+  font-size: var(--nav-font-size);
   line-height: 2.8;
 }
 
