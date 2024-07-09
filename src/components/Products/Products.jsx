@@ -17,7 +17,7 @@ const Products = () => {
     <div className="product-sect">
       <section>
         <header>Our Best Deals For You!</header>
-        <div className="header">
+        {/* <div className="header">
           <div className="select-container">
             {selectTagOptions.map((item, index) => {
               return (
@@ -37,11 +37,11 @@ const Products = () => {
               </span>
               <span>
                 <Icon icon="tabler:search" className="prod-icon" />
-                <p>Sign Up</p>
+                <p>Search</p>
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className="product-listings">

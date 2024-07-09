@@ -12,16 +12,9 @@
   font-family: var(--font-family);
 }
 
-.App-body {
-  margin: 0 auto;
-  max-width: 100%;
-}
-
 /* Nav */
 
 .App-nav {
-  margin: 0 auto;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,65 +151,4 @@
 
 .quick-link-sect ul li:nth-of-type(4) .quicklink-item .quicklink-icon {
   font-size: 3.2rem;
-}
-
-/* Existing styles (not rewritten) */
-
-/* Responsive styles */
-@media screen and (max-width: 960px) {
-  .App-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .nav-links ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: left;
-  }
-
-  .nav-cta {
-    margin-top: 10px;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .App-footer {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .quick-link-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
 }

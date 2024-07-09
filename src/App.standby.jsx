@@ -1,6 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
 import "./App.css";
 import logo from "../src/assets/logo.svg";
 import Products from "./components/Products/Products";
@@ -37,12 +36,6 @@ function App() {
     },
   ];
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <>
       <div className="App">
@@ -50,10 +43,7 @@ function App() {
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          <div className="hamburger" onClick={toggleMenu}>
-            <Icon icon="mdi:menu" />
-          </div>
-          <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <div className="nav-links">
             <ul>
               <li>
                 <Link className="nav-link-item" to="/">
@@ -98,7 +88,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </section>
-        {/* <footer className="App-footer">
+        <footer className="App-footer">
           <div className="footer-content">
             <div className="footer-cta">
               <img src={logo} alt="logo" />
@@ -143,7 +133,7 @@ function App() {
               })}
             </div>
           </div>
-        </footer> */}
+        </footer>
       </div>
     </>
   );

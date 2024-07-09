@@ -1,3 +1,4 @@
+/* General styles */
 .product-sect {
   margin: 2rem 5rem;
 }
@@ -20,8 +21,7 @@
 }
 
 .product-sect select {
-  padding: 8px 10px 8px 10px;
-  gap: 10px;
+  padding: 8px 10px;
   color: var(--primary-text-color);
   font-size: var(--primary-font-size);
   font-weight: 400;
@@ -40,7 +40,7 @@
 .product-sect .cta-container span {
   border: 1px solid;
   border-radius: 8px;
-  padding: 8px 10px 8px 10px;
+  padding: 8px 10px;
   min-width: 150px;
   min-height: 36px;
   align-items: center;
@@ -60,27 +60,38 @@
 
 /* Product Item */
 .product-listings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
   margin-top: 2.4rem;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .product-item {
-  width: calc(33.33% - 30px);
+  background-color: var(--product-item-bgc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .product-img {
-  padding: 0px 50px 0px 50px;
+  width: 100%;
+  padding: 0 50px;
   background-color: var(--product-item-bgc);
   min-height: 413px;
   object-fit: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .product-deets {
   margin-top: 20px;
+  width: 100%;
 }
 
 .product-deets div {
@@ -107,12 +118,13 @@
   color: rgba(79, 79, 79, 1);
 }
 
-/* cta buttons */
+/* CTA buttons */
 .product-cta {
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .product-cta .cta-btn {
@@ -120,7 +132,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0;
   font-size: var(--primary-font-size);
   min-height: 48px;
   min-width: 190px;
@@ -147,4 +159,40 @@
 .product-cta .cta-btn:last-child .cta-icon {
   width: 24px;
   height: 24px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 960px) {
+  .product-sect {
+    margin: 1rem 3rem;
+  }
+
+  .product-listings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .product-cta .cta-btn:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-listings {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 0 5px;
+    justify-content: center;
+  }
+
+  .product-item {
+    margin: 0 5px;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
 }
