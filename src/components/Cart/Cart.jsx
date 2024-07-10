@@ -69,6 +69,22 @@ const Cart = () => {
                   <Icon icon="ic:round-add" className="icon" />
                 </span>
               </div>
+              <div className="standby-table-deets">
+                <div className="table-descr">
+                  <span>{item.name}</span>
+                  <span>{item.description}</span>
+                </div>
+                <div className="price">{item.price}</div>
+                <div className="unit">
+                  <span>
+                    <Icon icon="ic:round-minus" className="icon" />
+                  </span>
+                  <span>{item.unit}</span>
+                  <span>
+                    <Icon icon="ic:round-add" className="icon" />
+                  </span>
+                </div>
+              </div>
               <div className="total">{item.total}</div>
               <div>
                 <Icon icon="ic:round-clear" className="clear-icon" />
@@ -76,7 +92,7 @@ const Cart = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="order_summary">
           <OrderSummary />
         </div>
       </div>

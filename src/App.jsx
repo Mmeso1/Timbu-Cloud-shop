@@ -50,9 +50,6 @@ function App() {
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          <div className="hamburger" onClick={toggleMenu}>
-            <Icon icon="mdi:menu" />
-          </div>
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
             <ul>
               <li>
@@ -78,8 +75,8 @@ function App() {
             </ul>
           </div>
           <div className="nav-cta">
-            <Icon icon="majesticons:search-line" />
-            <Link to="/cart">
+            <Icon icon="majesticons:search-line" className="cta-search" />
+            <Link to="/cart" className="cart-cta">
               <Icon icon="mdi:cart-outline" />
             </Link>
             <div>
@@ -88,6 +85,12 @@ function App() {
                 <p>Sign Up</p>
               </span>
             </div>
+          </div>
+          <div className="hamburger" onClick={toggleMenu}>
+            <Link to="/cart" className="cart-cta">
+              <Icon icon="mdi:cart-outline" />
+            </Link>
+            <Icon icon="ic:round-menu" className="menu-cta" />
           </div>
         </nav>
         <section className="App-body">
