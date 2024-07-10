@@ -62,7 +62,7 @@ const ProductItem = () => {
       description: "Samsung | Smart watch",
     },
     {
-      img_src: watch8,
+      img_src: watch,
       name: "Apple Remark Pro",
       price: "₦359.00K",
       description: "Apple Series 4 | Smart watch",
@@ -80,9 +80,9 @@ const ProductItem = () => {
             <div className="product-deets">
               <div>
                 <span className="product-name">{item.name}</span>
-                <span className="product-price">{item.price}</span>
+                <p className="product-descr">{item.description}</p>
               </div>
-              <p className="product-descr">{item.description}</p>
+              <span className="product-price">{item.price}</span>
             </div>
             <div className="product-cta">
               <button className="cta-btn">

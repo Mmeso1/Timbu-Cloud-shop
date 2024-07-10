@@ -34,6 +34,10 @@
   line-height: 24px;
 }
 
+.hamburger {
+  display: none;
+}
+
 .nav-links ul {
   display: flex;
   list-style: none;
