@@ -101,7 +101,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </section>
-        {/* <footer className="App-footer">
+        <footer className="App-footer">
           <div className="footer-content">
             <div className="footer-cta">
               <img src={logo} alt="logo" />
@@ -146,7 +146,7 @@ function App() {
               })}
             </div>
           </div>
-        </footer> */}
+        </footer>
       </div>
     </>
   );

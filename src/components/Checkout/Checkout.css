@@ -1,4 +1,8 @@
-.breadcrumb {
+.checkout-container {
+  margin: 2rem 5rem;
+}
+
+.breadcrumb p {
   color: rgba(142, 142, 142, 1);
 }
 
@@ -6,15 +10,14 @@
   color: var(--primary-text-color);
 }
 
-.checkout-container {
-  margin: 2rem 5rem;
+.nav-back {
+  display: none;
 }
 
 .checkout-body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  /* justify-content: space-evenly; */
   gap: 2rem;
   margin: 3rem 0;
 }
@@ -128,4 +131,44 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-container {
+    margin: 1.5rem;
+  }
+
+  .checkout-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .breadcrumb > p {
+    display: none;
+  }
+
+  .nav-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: rgba(142, 142, 142, 1);
+  }
+
+  .nav-back .icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .checkout-body {
+    margin: 2rem 0;
+  }
+
+  .card-details {
+    display: grid;
+  }
 }

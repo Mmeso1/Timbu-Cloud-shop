@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 import "./Checkout.css";
 import OrderSummary from "../OrderSummary/OrderSummary";
 
 const Checkout = () => {
   return (
     <div className="checkout-container">
-      <div className="breadcrumbs">
+      <div className="breadcrumb">
         <p>
           Home &gt; &nbsp;Products &nbsp; &gt; &nbsp;Cart &gt;{" "}
           <b>&nbsp;Checkout</b>
         </p>
+        <Link to="/cart" className="nav-back">
+          <Icon icon="ep:back" className="icon" />
+          <p>Go back to Cart</p>
+        </Link>
       </div>
       <div className="checkout-body">
         <div className="content">
@@ -59,7 +65,7 @@ const Checkout = () => {
             <button>Pay (₦674,310)</button>
           </div>
         </div>
-        <div>
+        <div className="order_summary">
           <OrderSummary />
         </div>
       </div>
