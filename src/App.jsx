@@ -43,6 +43,10 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <div className="App">
@@ -53,22 +57,30 @@ function App() {
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
             <ul>
               <li>
-                <Link className="nav-link-item" to="/">
+                <Link
+                  className="nav-link-item"
+                  to="/"
+                  onClick={handleLinkClick}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="nav-link-item" to="/products">
+                <Link
+                  className="nav-link-item"
+                  to="/products"
+                  onClick={handleLinkClick}
+                >
                   Products
                 </Link>
               </li>
               <li>
-                <a className="nav-link-item" href="#">
+                <a className="nav-link-item" href="#" onClick={handleLinkClick}>
                   About Us
                 </a>
               </li>
               <li>
-                <a className="nav-link-item" href="#">
+                <a className="nav-link-item" href="#" onClick={handleLinkClick}>
                   Contact Us
                 </a>
               </li>
@@ -86,11 +98,15 @@ function App() {
               </span>
             </div>
           </div>
-          <div className="hamburger" onClick={toggleMenu}>
+          <div className="hamburger">
             <Link to="/cart" className="cart-cta">
               <Icon icon="mdi:cart-outline" />
             </Link>
-            <Icon icon="ic:round-menu" className="menu-cta" />
+            <Icon
+              icon="ic:round-menu"
+              className="menu-cta"
+              onClick={toggleMenu}
+            />
           </div>
         </nav>
         <section className="App-body">

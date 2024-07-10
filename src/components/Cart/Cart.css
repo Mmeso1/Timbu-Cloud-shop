@@ -131,7 +131,7 @@
   color: rgba(255, 153, 153, 1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .cart-container {
     margin: 2rem;
   }
