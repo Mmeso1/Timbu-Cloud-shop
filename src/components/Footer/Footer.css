@@ -1,0 +1,74 @@
+/* Footer */
+.App-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(142, 142, 142, 1);
+  min-height: 364px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 128px;
+}
+
+.App-footer .footer-cta {
+  font-size: var(--primary-font-size);
+  color: var(--footer-light-text);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.App-footer .footer-cta p {
+  line-height: 2;
+}
+
+.App-footer .quick-link-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 847px;
+}
+
+.quick-link-sect {
+  flex: 1;
+}
+
+.quick-link-sect header {
+  font-weight: 600;
+  font-size: var(--nav-font-size);
+  line-height: 2.8;
+}
+
+.quick-link-sect ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-link-sect ul > li {
+  line-height: 2.4;
+}
+
+.quick-link-sect ul > li > a {
+  color: var(--footer-light-text);
+  font-size: var(--primary-font-size);
+  font-weight: 400;
+  text-decoration: none;
+}
+/* remember to add tag a when having fixed the html */
+
+.quicklink-item {
+  display: flex;
+  align-items: start;
+  text-decoration: none;
+  color: inherit;
+}
+.quicklink-icon {
+  font-size: 2.3rem;
+  padding-right: 1rem;
+}
+
+.quick-link-sect ul li:nth-of-type(4) .quicklink-item .quicklink-icon {
+  font-size: 3.2rem;
+}

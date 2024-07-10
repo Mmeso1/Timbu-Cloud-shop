@@ -11,29 +11,22 @@ import Checkout from "./components/Checkout/Checkout";
 function App() {
   const quicklinks = [
     {
-      header: "Navigations",
-      links: ["Home", "Product", "About Us", "Contact Us"],
+      link: "HOME",
     },
     {
-      header: "Categories",
-      links: ["Analog", "Digital", "Smart"],
+      link: "QUICK NAVIGATIONS",
     },
     {
-      header: "Brands",
-      links: ["Richard Mille", "Rolex", "Casio", "Omega", "Smartwatches"],
+      link: "OUR PRODUCTS",
     },
     {
-      header: "Quicklinks",
-      links: ["Cart", "History", "Track Order", "Discounts", "FAQ"],
+      link: "CONTACT US",
     },
     {
-      header: "Contacts",
-      links: [
-        { text: "Twitter", icon: "hugeicons:new-twitter" },
-        { text: "Facebook", icon: "basil:facebook-outline" },
-        { text: "Instagram", icon: "uil:instagram" },
-        { text: "23a/b Kings road, Ikeja, Lagos", icon: "ph:address-book" },
-      ],
+      link: "ABOUT US",
+    },
+    {
+      link: "LOCATION",
     },
   ];
 
@@ -117,52 +110,32 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </section>
-        {/* <footer className="App-footer">
+        <footer className="App-footer">
           <div className="footer-content">
             <div className="footer-cta">
               <img src={logo} alt="logo" />
-              <p>
-                Enhance your style with our premium <br />
-                wristwatches
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "4px",
-                }}
-              >
-                <Icon icon="solar:copyright-outline" />
-                <span>{new Date().getFullYear()}</span>
-              </p>
             </div>
             <div className="quick-link-container">
-              {quicklinks.map((item, index) => {
-                return (
-                  <div className="quick-link-sect" key={index}>
-                    <header>{item.header}</header>
-                    <ul>
-                      {item.links.map((link, idx) => (
-                        <li key={idx}>
-                          <a href="#" className="quicklink-item">
-                            {link.icon && (
-                              <Icon
-                                icon={link.icon}
-                                className="quicklink-icon"
-                              />
-                            )}
-                            {link.text || link}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
+              <div className="quick-link-sect">
+                <ul>
+                  {quicklinks.map((item, index) => (
+                    <Link key={index}>
+                      <li key={index}>{item.link}</li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </footer> */}
+          <section className="footer-contacts">
+            <div className="footer-icons">
+              <Icon icon="hugeicons:new-twitter" className="icon" />
+              <Icon icon="basil:facebook-outline" className="icon" />
+              <Icon icon="uil:instagram" className="icon" />
+            </div>
+            <div className="footer-shoutout">Please Follow Us!</div>
+          </section>
+        </footer>
       </div>
     </>
   );

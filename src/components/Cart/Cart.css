@@ -69,8 +69,6 @@
 .table-descr {
   display: flex;
   flex-direction: column;
-  /* margin: 0px 5.7rem; */
-  /* width: 138px; */
 }
 
 .table-descr span:first-child {

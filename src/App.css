@@ -95,48 +95,34 @@
 
 /* Footer */
 .App-footer {
-  margin-top: auto;
   border-top: 1px solid rgba(142, 142, 142, 1);
   min-height: 364px;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
 }
 
 .footer-content {
+  margin-top: auto;
   display: flex;
+  align-items: center;
   gap: 128px;
+  justify-content: space-evenly;
 }
 
 .App-footer .footer-cta {
   font-size: var(--primary-font-size);
   color: var(--footer-light-text);
   text-align: center;
-  padding-top: 1rem;
 }
 
 .App-footer .footer-cta p {
   line-height: 2;
 }
 
-.App-footer .quick-link-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-width: 847px;
-}
-
-.quick-link-sect {
-  flex: 1;
-}
-
-.quick-link-sect header {
-  font-weight: 600;
-  font-size: var(--nav-font-size);
-  line-height: 2.8;
-}
-
 .quick-link-sect ul {
+  display: flex;
+  flex: 1;
+  gap: 40px;
   list-style: none;
   padding: 0;
 }
@@ -145,27 +131,32 @@
   line-height: 2.4;
 }
 
-.quick-link-sect ul > li > a {
+.quick-link-sect ul > a {
   color: var(--footer-light-text);
   font-size: var(--primary-font-size);
   font-weight: 400;
   text-decoration: none;
 }
-/* remember to add tag a when having fixed the html */
 
-.quicklink-item {
-  display: flex;
-  align-items: start;
-  text-decoration: none;
-  color: inherit;
-}
-.quicklink-icon {
-  font-size: 2.3rem;
-  padding-right: 1rem;
+.footer-contacts {
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.quick-link-sect ul li:nth-of-type(4) .quicklink-item .quicklink-icon {
-  font-size: 3.2rem;
+.footer-contacts .footer-icons .icon {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.footer-shoutout {
+  font-size: 16px;
 }
 
 /* Existing styles (not rewritten) */
@@ -244,12 +235,23 @@
   .footer-content {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
+    text-align: left;
   }
 
-  .quick-link-container {
+  .quick-link-sect ul {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .App-footer {
+    justify-content: normal;
+  }
+
+  .footer-content {
+    margin-right: auto;
+  }
+
+  .footer-cta {
+    border-bottom: 1px solid rgba(57, 189, 59, 1);
   }
 }
 
