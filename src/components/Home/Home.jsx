@@ -8,8 +8,8 @@ import cat3 from "../../assets/cat-3.png";
 import cat4 from "../../assets/cat-4.png";
 import cat5 from "../../assets/watch.svg";
 import watch1 from "../../assets/watch.svg";
-import watch2 from "../../assets/watch (2).svg";
-import watch3 from "../../assets/watch (3).svg";
+import watch2 from "../../assets/watch (1).svg";
+import watch3 from "../../assets/watch (2).svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -109,18 +109,10 @@ const Home = () => {
         </Swiper>
       </section>
       <section className="best-deals">
-        <h1>Best Deals</h1>
-        <div className="product-items">
+        <h1>Our Best Deals For You!</h1>
+        <div className="product-listings">
           {productItemDetails.map((item, index) => {
-            return (
-              <ProductItem
-                img_src={item.img_src}
-                name={item.name}
-                price={item.price}
-                description={item.description}
-                key={index}
-              />
-            );
+            return <ProductItem key={index} item={item} />;
           })}
         </div>
       </section>
