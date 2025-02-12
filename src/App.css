@@ -7,15 +7,14 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   color: var(--primary-text-color);
   font-family: var(--font-family);
 }
 
-/* .App-body {
-  margin: 0 auto;
-  max-width: 100%;
-} */
+.App-body {
+  flex-grow: 1; /* Allows content to take up remaining space */
+}
 
 /* Nav */
 
@@ -33,6 +32,16 @@
   font-weight: 400;
   line-height: 24px;
 }
+
+/* .App-nav:active {
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+} */
 
 .hamburger {
   display: none;
