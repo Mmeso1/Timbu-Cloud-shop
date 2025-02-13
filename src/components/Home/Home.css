@@ -160,24 +160,69 @@
 }
 
 /* Make the product listings responsive */
-.best-deals {
+section.best-deals {
   margin-top: 60px;
 }
 
-.best-deals,
-.top-picks {
+section.best-deals,
+section.top-picks {
   padding: 20px;
 }
 
-.best-deals .product-listings,
-.top-picks .product-listings {
+section.best-deals .product-listings,
+section.top-picks .product-listings {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* Adjust the product image */
-.best-deals .product-listings .product-img,
-.top-picks .product-listings .product-img {
+section.best-deals .product-listings .product-img,
+section.top-picks .product-listings .product-img {
   background-color: rgba(243, 243, 243, 1);
+}
+
+/* Form section */
+section.reach-out {
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+section.reach-out form {
+  margin: 0 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+section.reach-out form .form-names {
+  display: flex;
+  gap: 20px;
+}
+
+section.reach-out form .form-names div {
+  flex: auto;
+}
+
+section.reach-out form .form-names .form-group,
+section.reach-out form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.reach-out form .form-group.message textarea {
+  border: 1px solid rgba(192, 192, 192, 1);
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+}
+section.reach-out form .form-group.message textarea::placeholder {
+  font-family: Lato;
+  color: rgba(192, 192, 192, 1);
+}
+section.reach-out form .form-group.message textarea {
+  padding: 10px;
 }

@@ -147,6 +147,50 @@ const Home = () => {
           })}
         </div>
       </section>
+      <section className="reach-out">
+        <h1 className="header-text">Reach Out to Us</h1>
+        <form action="" method="post">
+          <div className="form-names">
+            <div className="form-group">
+              <label htmlFor="firstname">First Name</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="lastname">Last Name</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Enter your last name"
+              />
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="Email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div className="form-group message">
+            <label htmlFor="message">Your Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </>
   );
 };
