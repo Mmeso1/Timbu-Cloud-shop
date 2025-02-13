@@ -12,6 +12,8 @@ import watch3 from "../../assets/watch (2).svg";
 import watch4 from "../../assets/watch (3).svg";
 import watch5 from "../../assets/watch (4).svg";
 import watch6 from "../../assets/watch (5).svg";
+import ghsock1 from "../../assets/gshock1.png";
+import ghsock2 from "../../assets/gshock2.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -117,6 +119,14 @@ const Home = () => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           modules={[Autoplay]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
         >
           {swiperContent.map((content, index) => (
             <SwiperSlide key={index}>
@@ -151,7 +161,7 @@ const Home = () => {
         <h1 className="header-text">Reach Out to Us</h1>
         <form action="" method="post">
           <div className="form-names">
-            <div className="form-group">
+            <div className="form-gr</section>oup">
               <label htmlFor="firstname">First Name</label>
               <input
                 type="text"
@@ -171,7 +181,7 @@ const Home = () => {
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor="Email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
@@ -190,6 +200,22 @@ const Home = () => {
           </div>
           <button type="submit">Send Message</button>
         </form>
+      </section>
+
+      <section className="shop-now">
+        <img src={ghsock1} alt="gshock watch" />
+        <div className="center-piece">
+          <div>
+            <h1>Buy Two or More Watches, Get an Exclusive Discount!</h1>
+            <p>
+              Enhance your style with our premium wristwatches. Purchase two or
+              more and enjoy unbeatable savings on your favorite timepieces up
+              to 20% discount.
+            </p>
+          </div>
+          <button>Shop Now</button>
+        </div>
+        <img src={ghsock2} alt="gshock watch" />
       </section>
     </>
   );
