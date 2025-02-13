@@ -88,8 +88,6 @@
 /* Header texts */
 .header-text {
   margin-left: 3rem;
-  margin-top: 3.5rem;
-
   font-weight: var(--font-weight-500);
   font-size: 22px;
   line-height: 32px;
@@ -101,9 +99,6 @@
 /* carousel */
 .category-carousel {
   margin: 0 auto;
-}
-
-.category-carousel {
   padding-left: 20px;
 }
 
@@ -166,16 +161,23 @@
 
 /* Make the product listings responsive */
 .best-deals {
+  margin-top: 60px;
+}
+
+.best-deals,
+.top-picks {
   padding: 20px;
 }
 
-.best-deals .product-listings {
+.best-deals .product-listings,
+.top-picks .product-listings {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* Adjust the product image */
-.best-deals .product-listings .product-img {
+.best-deals .product-listings .product-img,
+.top-picks .product-listings .product-img {
   background-color: rgba(243, 243, 243, 1);
 }

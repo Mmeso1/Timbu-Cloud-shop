@@ -139,7 +139,7 @@ const Home = () => {
           })}
         </div>
       </section>
-      <section className="best-deals">
+      <section className="top-picks">
         <h1 className="header-text">Our Top Pick</h1>
         <div className="product-listings">
           {productItemDetails.slice(3, 6).map((item, index) => {
