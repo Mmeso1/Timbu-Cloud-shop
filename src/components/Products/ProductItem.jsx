@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import "./Products.css";
 
 const ProductItem = ({ item }) => {
   return (

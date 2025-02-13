@@ -38,6 +38,33 @@ const Home = () => {
       description: "Apple Series 9 | Smart watch",
     },
   ];
+  const swiperContent = [
+    {
+      heading: "Oraimo",
+      subHeading: "Smart Watch",
+      img: cat2,
+    },
+    {
+      heading: "Omega",
+      subHeading: "Analog Watch",
+      img: cat3,
+    },
+    {
+      heading: "Samsung",
+      subHeading: "Smart Watch",
+      img: cat4,
+    },
+    {
+      heading: "Rolex",
+      subHeading: "Analog Watch",
+      img: cat3,
+    },
+    {
+      heading: "Richard Mille",
+      subHeading: "Analog Watch",
+      img: cat1,
+    },
+  ];
   return (
     <>
       <section className="header">
@@ -64,52 +91,28 @@ const Home = () => {
         />
       </section>
       <section className="category-carousel">
-        <h1>Our Top Categories</h1>
+        <h1 className="header-text">Our Top Categories</h1>
         <Swiper
           slidesPerView={4}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           modules={[Autoplay]}
         >
-          <SwiperSlide>
-            <div className="text">
-              <h1>Richard Mille</h1>
-              <p>Analog Watch</p>
-            </div>
-            <img src={cat1} alt="Richard Mille Analog Watch" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text">
-              <h1>Oraimo</h1>
-              <p>Smart Watch</p>
-            </div>
-            <img src={cat2} alt="Oraimo Smart Watch" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text">
-              <h1>Omega</h1>
-              <p>Analog Watch</p>
-            </div>
-            <img src={cat3} alt="Omega Analog Watch" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text">
-              <h1>Samsung Watch</h1>
-              <p>Smart Watch</p>
-            </div>
-            <img src={cat4} alt="Samsung Smart Watch" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="text">
-              <h1>Rolex</h1>
-              <p>Analog Watch</p>
-            </div>
-            <img src={cat5} alt="Rolex Analog Watch" />
-          </SwiperSlide>
+          {swiperContent.map((content, index) => (
+            <SwiperSlide key={index}>
+              <div className="text">
+                <h1>{content.heading}</h1>
+                <p>{content.subHeading}</p>
+              </div>
+              <div className="image-wrapper">
+                <img src={content.img} alt={content.heading} />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
       <section className="best-deals">
-        <h1>Our Best Deals For You!</h1>
+        <h1 className="header-text">Our Best Deals For You!</h1>
         <div className="product-listings">
           {productItemDetails.map((item, index) => {
             return <ProductItem key={index} item={item} />;
