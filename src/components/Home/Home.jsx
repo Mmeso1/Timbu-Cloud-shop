@@ -6,10 +6,12 @@ import cat1 from "../../assets/cat-1.svg";
 import cat2 from "../../assets/cat-2.svg";
 import cat3 from "../../assets/cat-3.png";
 import cat4 from "../../assets/cat-4.png";
-import cat5 from "../../assets/watch.svg";
 import watch1 from "../../assets/watch.svg";
 import watch2 from "../../assets/watch (1).svg";
 import watch3 from "../../assets/watch (2).svg";
+import watch4 from "../../assets/watch (3).svg";
+import watch5 from "../../assets/watch (4).svg";
+import watch6 from "../../assets/watch (5).svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -36,6 +38,24 @@ const Home = () => {
       name: "Rubber-band Apple Watch",
       price: "₦791.03K",
       description: "Apple Series 9 | Smart watch",
+    },
+    {
+      img_src: watch4,
+      name: "Tempo W3",
+      price: "₦25.85K",
+      description: "Oraimo | Smart watch",
+    },
+    {
+      img_src: watch5,
+      name: "Gold Digital Casio Watch",
+      price: "₦35.50K",
+      description: "Casio | Digital watch",
+    },
+    {
+      img_src: watch6,
+      name: "Apple Remark Spot",
+      price: "₦250.00K",
+      description: "Apple Series 4 | Smart watch",
     },
   ];
   const swiperContent = [
@@ -114,7 +134,15 @@ const Home = () => {
       <section className="best-deals">
         <h1 className="header-text">Our Best Deals For You!</h1>
         <div className="product-listings">
-          {productItemDetails.map((item, index) => {
+          {productItemDetails.slice(0, 3).map((item, index) => {
+            return <ProductItem key={index} item={item} />;
+          })}
+        </div>
+      </section>
+      <section className="best-deals">
+        <h1 className="header-text">Our Top Pick</h1>
+        <div className="product-listings">
+          {productItemDetails.slice(3, 6).map((item, index) => {
             return <ProductItem key={index} item={item} />;
           })}
         </div>

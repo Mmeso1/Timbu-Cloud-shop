@@ -87,7 +87,9 @@
 
 /* Header texts */
 .header-text {
-  padding-left: 1.2rem;
+  margin-left: 3rem;
+  margin-top: 3.5rem;
+
   font-weight: var(--font-weight-500);
   font-size: 22px;
   line-height: 32px;
@@ -97,17 +99,16 @@
 }
 
 /* carousel */
-.category-carousel,
-.best-deals {
-  width: 100%;
-  margin: auto;
-  margin-left: 1.5rem;
-  margin-top: 3.5rem;
-  padding: 20px;
+.category-carousel {
+  margin: 0 auto;
+}
+
+.category-carousel {
+  padding-left: 20px;
 }
 
 .category-carousel .swiper {
-  width: 100%;
+  margin-left: 1.5rem;
 }
 
 .category-carousel .swiper .swiper-wrapper {
@@ -164,10 +165,14 @@
 }
 
 /* Make the product listings responsive */
+.best-deals {
+  padding: 20px;
+}
 
 .best-deals .product-listings {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* Adjust the product image */
