@@ -10,7 +10,7 @@ const root = createRoot(container); // Create a root.
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Timbu-Cloud-shop">
       <App />
     </BrowserRouter>
   </React.StrictMode>
